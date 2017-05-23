@@ -24,12 +24,22 @@ class Shopping_carts
 
 
   def self.total_before
-    @total_before=0
+    @total_before = 0
     @@products.each do |product|
       @total_before += product.price
     end
     @total_before
   end
+
+  def self.total_after
+    @total_after = 0
+    @@products.each do |product|
+      @total_after += product.price * 1.13
+    end
+    @total_after
+  end
+
+
 
 end
 
